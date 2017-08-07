@@ -1,0 +1,13 @@
+{
+    "name": "dgmon/zazzlecore",
+    "description": "A php library",
+    "type": "library",
+    "authors": [
+        {
+            "name": "HoninWorx",
+            "email": "darkhonin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

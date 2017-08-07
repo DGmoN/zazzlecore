@@ -1,0 +1,1 @@
+{"config_dir":"zazzle\/zazzlecore\/config.json","access":[{"catch":"^(.*)$","except":["^\/static\/"],"to":"index.php?dir=$1 [QSA]"}],"hash":"0d766bf95e042dd095592ee1c0b217f1"}

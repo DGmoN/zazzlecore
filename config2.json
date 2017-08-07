@@ -1,0 +1,1 @@
+{"CONFIG_DIR":"zazzle\/zazzlecore\/config2.json","MODULE_ROOT":"zazzle\/","ACCESS_CONFIG":{"index":{"catch":"^(.*)^","to":"index.php?dir=$1","cond":{"%{REQUEST_URI}":["!^\/static\/"]},"hash":"1243dcbe0d103d01bca2038448dccc66"}},"CONFIG_HASH":"2b5320bb2a88c9a95686189ce7914c22"}
