@@ -1,1 +1,1 @@
-{"CONFIG_DIR":"zazzle\/zazzlecore\/config2.json","MODULE_ROOT":"zazzle\/","ACCESS_CONFIG":{"index":{"catch":"^(.*)^","to":"index.php?dir=$1","cond":{"%{REQUEST_URI}":["!^\/static\/"]},"hash":"1243dcbe0d103d01bca2038448dccc66"}},"CONFIG_HASH":"2b5320bb2a88c9a95686189ce7914c22"}
+{"CONFIG_HASH":"a8e2ac2ed0768b451a14bf1173d20efd","MODULE_ROOT":"zazzle\/","ACCESS_CONFIG":{"index":{"catch":"^(.*)^","to":"index.php?dir=$1","cond":{"%{REQUEST_URI}":["!^\/setup.php"]},"hash":"aeaa2507e24890a4751b0e88a8fc5c0c"}},"ACCESS_SCRIPT":"res\/access.php","ACTION_DIRS":["pages\/root.php"]}
