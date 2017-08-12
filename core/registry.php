@@ -9,7 +9,7 @@ class Registry{
 	public static $ACTIONS = [];
 	
 	public static function register_module($Name){
-		echo "Module registered ".$Name."<br>";
+		//echo "Module registered ".$Name."<br>";
 		array_push(self::$MODULES, $Name);
 	}
 	
@@ -18,7 +18,7 @@ class Registry{
 		foreach(self::$MODULES as $k => $M){
 			if(!is_string($M)){
 				$M->config();
-				echo $k.($M->commit()? " has updated its config" : " has not changed")."<br>";
+				//echo $k.($M->commit()? " has updated its config" : " has not changed")."<br>";
 			}
 		}
 	}
@@ -38,14 +38,14 @@ class Registry{
 	// Binds the handler(function or handler object) to a regex
 	public static function register_action($regex, $handler){
 		if(isset(self::$ACTIONS[$regex])){
-			echo $regex." expanded action <br>";
+			//echo $regex." expanded action <br>";
 			if(is_array(self::$ACTIONS[$regex])){
 				array_push(self::$ACTIONS[$regex], $handler);
 			}else{
 				self::$ACTIONS[$regex] = [self::$ACTIONS[$regex], $handler];
 			}
 		}else{
-			echo $regex." Registered action <br>";
+			//echo $regex." Registered action <br>";
 			self::$ACTIONS[$regex] = $handler;
 		}
 	}

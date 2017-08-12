@@ -27,10 +27,15 @@ class coreConfig extends Config{
 		
 	
 	public function config(){
-		require_once($this->ACCESS_SCRIPT);
+		if(file_exists($this->ACCESS_SCRIPT))
+			require_once($this->ACCESS_SCRIPT);
+		else{} // Loggin that access script was not found
+		
 		Access::check_file();
 		foreach($this->ACTION_DIRS as $act){
-			require_once($act);
+			if(file_exists($act))
+				require_once($act);
+			else{}//log that action file does not exist
 		}
 	}
 }
