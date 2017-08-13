@@ -9,7 +9,7 @@ class Registry{
 	public static $ACTIONS = [];
 	
 	public static function register_module($Name){
-		//echo "Module registered ".$Name."<br>";
+		echo "Module registered ".$Name."<br>";
 		array_push(self::$MODULES, $Name);
 	}
 	
@@ -18,7 +18,7 @@ class Registry{
 		foreach(self::$MODULES as $k => $M){
 			if(!is_string($M)){
 				$M->config();
-				//echo $k.($M->commit()? " has updated its config" : " has not changed")."<br>";
+				echo $k.($M->commit()? " has updated its config" : " has not changed")."<br>";
 			}
 		}
 	}
@@ -29,8 +29,9 @@ class Registry{
 				$str = "\zazzle\\".$M."\\".$M."Config";
 				$cfg = new $str();
 				$cfg->read_config();
-				$cfg->config();
 				self::$MODULES[$M] = $cfg;
+				$cfg->config();
+				
 			}
 		}
 	}

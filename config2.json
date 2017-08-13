@@ -1,1 +1,1 @@
-{"CONFIG_HASH":"a8e2ac2ed0768b451a14bf1173d20efd","MODULE_ROOT":"zazzle\/","ACCESS_CONFIG":{"index":{"catch":"^(.*)^","to":"index.php?dir=$1","cond":{"%{REQUEST_URI}":["!^\/setup.php"]},"hash":"aeaa2507e24890a4751b0e88a8fc5c0c"}},"ACCESS_SCRIPT":"res\/access.php","ACTION_DIRS":["pages\/root.php"]}
+{"CONFIG_HASH":"ced5b51ac81a990d088c00e4e27477c9","MODULE_ROOT":"C:\\Users\\HoninMobile\\Google Drive\\Code\\Web\\PSMC\\vendor\\dgmon\\","ACCESS_CONFIG":[],"ACCESS_SCRIPT":"","ACTION_DIRS":[]}

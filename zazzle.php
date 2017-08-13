@@ -28,7 +28,9 @@ function load(){
 
 function setup(){
 		echo "Loading modules<br>";
+		
 		Registry::config_modules();
+		
 		load_modules();
 		echo "running Initial config<br>";
 		Registry::config_modules();

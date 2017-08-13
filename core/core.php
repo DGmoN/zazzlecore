@@ -6,7 +6,7 @@ use zazzle\core\Registry;
 
 class coreConfig extends Config{
 		
-	public $MODULE_ROOT = "zazzle/";
+	public $MODULE_ROOT = "";
 	public $ACCESS_SCRIPT = "";
 	
 	public $ACCESS_CONFIG = [];
@@ -14,7 +14,8 @@ class coreConfig extends Config{
 		
 	function __construct(){
 		$this->MODULE_ROOT = __DIR__;
-		parent::__construct("zazzle/zazzlecore/config2.json");
+		
+		parent::__construct(dirname(__DIR__)."/config2.json");
 	}
 	
 	function get_manifest(){
@@ -85,7 +86,6 @@ class Access{
 			
 		
 		//echo "<textarea style='width:50%; height:150px;'>".self::$FDATA."</textarea>";
-		
 		foreach(Registry::$MODULES['core']->ACCESS_CONFIG as $a=>$v){
 			//echo "Looking if segment present: ".$a."<br>";
 			if(!($segment = self::get_segment($a))){
