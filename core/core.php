@@ -15,7 +15,7 @@ class coreConfig extends Config{
 	function __construct(){
 		$this->MODULE_ROOT = __DIR__;
 		
-		parent::__construct(dirname(__DIR__)."/config2.json");
+		parent::__construct(dirname(__DIR__)."/config.json");
 	}
 	
 	function get_manifest(){
@@ -30,13 +30,17 @@ class coreConfig extends Config{
 	public function config(){
 		if(file_exists($this->ACCESS_SCRIPT))
 			require_once($this->ACCESS_SCRIPT);
-		else{} // Loggin that access script was not found
+		else{
+			echo "No access script";
+		} // Loggin that access script was not found
 		
 		Access::check_file();
 		foreach($this->ACTION_DIRS as $act){
 			if(file_exists($act))
 				require_once($act);
-			else{}//log that action file does not exist
+			else{
+				echo "No action script";
+			}//log that action file does not exist
 		}
 	}
 }

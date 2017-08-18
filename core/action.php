@@ -7,7 +7,7 @@ class Actions{
 	public static function rest_action($url=null){
 		if(!$url)
 			$url = $_SERVER['REQUEST_URI'];
-
+		
 		foreach(Registry::$ACTIONS as $R=>$H){
 			$matchs = [];
 			if(preg_match("/".$R."/", $url, $matchs)){
