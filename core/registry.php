@@ -9,7 +9,7 @@ class Registry{
 	public static $ACTIONS = [];
 	
 	public static function register_module($Name){
-		////echo "Module registered ".$Name."<br>";
+		//echo "Module registered ".$Name."<br>";
 		array_push(self::$MODULES, $Name);
 	}
 	

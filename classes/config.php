@@ -10,7 +10,7 @@ class Config{
 		
 	private $CONFIG_HASH = "";
 	
-	function __construct(string $file){
+	function __construct($file){
 		$this->CONFIG_DIR = $file;
 	}
 	

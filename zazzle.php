@@ -27,7 +27,7 @@ function load(){
 
 
 function setup(){
-		echo "Loading modules<br>";
+		
 		
 		Registry::config_modules();
 		
@@ -37,6 +37,7 @@ function setup(){
 }
 
 function load_modules(){
+	//echo "Loading modules<br>";
 	$root = Registry::$MODULES['core']->MODULE_ROOT;
 	$folders = scandir($root);
 		foreach($folders as $f){
